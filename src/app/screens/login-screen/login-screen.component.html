@@ -20,8 +20,19 @@
                 <div class="input-group-text" id="show-password" data-password="false">
                   <i *ngIf="type == 'password'" class="bi bi-eye-fill" (click)="showPassword()"></i>
                   <i *ngIf="type == 'text'" class="bi bi-eye-slash-fill" (click)="showPassword()"></i>
+                </div>
               </div>
-              </div>
+              <!-- <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div> -->
+            </div>
+
+            <!-- Label olvidé contraseña -->
+            <div class="mb-3">
+              <label class="form-check-label" for="checkbox-signin">Olvidé mi contraseña</label>
+            </div>
+            <!-- Botones -->
+            <div class="d-flex flex-column align-items-center mb-3 w-100" style="text-align: center;">
+              <button class="btn btn-primary" type="submit" (click)="login()">Iniciar sesión</button>
+              <label class="form-check-label pt-3" for="checkbox-signin" (click)="registrar()">Registrarse</label>
             </div>
           </div>
         </div>
