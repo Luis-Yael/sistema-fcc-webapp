@@ -9,6 +9,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { LoginScreenComponent } from './screens/login-screen/login-screen.component';
 import { RegistroScreenComponent } from './screens/registro-screen/registro-screen.component';
 import { NavbarComponent } from './partials/navbar/navbar.component';
+//Este import es para los servicios HTTP
+import { HttpClientModule } from '@angular/common/http';
 
 import { RegistroAdminComponent } from './partials/registro-admin/registro-admin.component';
 import { RegistroAlumnosComponent } from './partials/registro-alumnos/registro-alumnos.component';
@@ -50,7 +52,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatNativeDateModule,
     MatTableModule,
     MatPaginatorModule,
-
+    HttpClientModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    MatSelectModule
 
   ],
   providers: [],

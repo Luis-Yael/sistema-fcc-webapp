@@ -17,14 +17,13 @@
 }
 
 .header-registro{
-  width: 10vw;
+  width: 100vw;
   height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-
 .body-registro{
   width: 100vw;
   height: 90vh;
@@ -33,10 +32,13 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .img-slider{
   width: 900px;
   height: 630px;
 }
+
+
 //Radio buttons
 .title-user{
   font-size: 28px;
@@ -51,14 +53,12 @@
 .container{
   width: 50vw;
 }
-
 ::ng-deep .mat-mdc-radio-button .mdc-form-field {
   color: #231F20;
   font-family: Nexa;
   font-size: 20px;
 }
 
-//Cambia el color del radio focus
 ::ng-deep .mat-mdc-radio-button.mat-accent {
   --mdc-radio-selected-focus-icon-color: #0092B8;
   --mdc-radio-selected-hover-icon-color: #0092B8;
