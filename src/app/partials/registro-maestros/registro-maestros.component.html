@@ -74,7 +74,7 @@
 
         <mat-form-field class="mat-input" appearance="outline">
           <mat-label>Área de investigación</mat-label>
-          <mat-select [(ngModel)]="maestro.area_investigacion">
+          <mat-select [(ngModel)]="maestro.area_investigacion" (selectionChange)="changeSelect($event)">
             <mat-option *ngFor="let area of areas" [value]="area.viewValue">
               {{area.viewValue}}
             </mat-option>
@@ -94,6 +94,7 @@
             </mat-checkbox>
           </div>
         </div>
+        <div *ngIf="errors.materias_json" class="invalid-feedback">{{ errors.materias_json }}</div>
 
         <div class="section-buttons">
             <button class="btn btn-danger" (click)="regresar()">Cancelar</button>

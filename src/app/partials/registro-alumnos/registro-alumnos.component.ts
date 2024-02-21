@@ -78,7 +78,7 @@ export class RegistroAlumnosComponent implements OnInit{
   }
 
   //Función para detectar el cambio de fecha
-  public changeFecha(event :any){
+  public changeFecha(event:any){
     console.log(event);
     console.log(event.value.toISOString());
 

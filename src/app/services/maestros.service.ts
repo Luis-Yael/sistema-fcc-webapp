@@ -100,7 +100,8 @@ export class MaestrosService {
     }
 
     if(data["materias_json"].length == 0){
-      alert("Debes seleccionar materias para poder registrarte.");
+      error["materias_json"] = "Al menos debes elegir una materia";
+      //alert("Debes seleccionar materias para poder registrarte.");
     }
     //Return arreglo
     return error;

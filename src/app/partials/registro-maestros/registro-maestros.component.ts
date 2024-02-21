@@ -117,18 +117,22 @@ export class RegistroMaestrosComponent implements OnInit{
   }
 
   public checkboxChange(event:any){
-    //console.log("Evento: ", event);
+    console.log("Evento: ", event);
     if(event.checked){
       this.maestro.materias_json.push(event.source.value)
     }else{
       console.log(event.source.value);
       this.maestro.materias_json.forEach((materia, i) => {
         if(materia == event.source.value){
-          this.maestro.materias_json.splice(i,1)
+          this.maestro.materias_json.splice(i,1);
         }
       });
     }
     console.log("Array materias: ", this.maestro);
   }
 
+  public changeSelect(event:any){
+    console.log(event.value);
+    this.maestro.area_investigacion = event.value;
+  }
 }
