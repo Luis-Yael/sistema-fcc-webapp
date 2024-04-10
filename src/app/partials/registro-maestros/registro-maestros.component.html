@@ -74,7 +74,7 @@
 
         <mat-form-field class="mat-input" appearance="outline">
           <mat-label>Área de investigación</mat-label>
-          <mat-select [(ngModel)]="maestro.area_investigacion" (selectionChange)="changeSelect($event)">
+          <mat-select [(ngModel)]="maestro.area_investigacion">
             <mat-option *ngFor="let area of areas" [value]="area.viewValue">
               {{area.viewValue}}
             </mat-option>
@@ -89,12 +89,11 @@
             </div>
           </div>
           <div class="checkbox-group" *ngFor="let materia of materias; let i = index">
-            <mat-checkbox class="checkbox-item opc-sc" name="opsc" (change)="checkboxChange($event)" value="{{materia.nombre}}">
+            <mat-checkbox class="checkbox-item opc-sc" name="opsc" (change)="checkboxChange($event)" value="{{materia.nombre}}" [checked]="revisarSeleccion(materia.nombre)">
                 <div class="d-checkbox-nombre">{{materia.nombre}}</div>
             </mat-checkbox>
           </div>
         </div>
-        <div *ngIf="errors.materias_json" class="invalid-feedback">{{ errors.materias_json }}</div>
 
         <div class="section-buttons">
             <button class="btn btn-danger" (click)="regresar()">Cancelar</button>

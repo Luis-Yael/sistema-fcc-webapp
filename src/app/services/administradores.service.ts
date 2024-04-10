@@ -112,4 +112,16 @@ export class AdministradoresService {
     return this.http.get<any>(`${environment.url_api}/lista-admins/`, {headers:headers});
   }
 
+  //Obtener un solo usuario dependiendo su ID
+  public getAdminByID(idUser: Number){
+    return this.http.get<any>(`${environment.url_api}/admin/?id=${idUser}`,httpOptions);
+  }
+
+  //Servicio para actualizar un usuario
+  public editarAdmin (data: any): Observable <any>{
+    var token = this.facadeService.getSessionToken();
+    var headers = new HttpHeaders({ 'Content-Type': 'application/json' , 'Authorization': 'Bearer '+token});
+    return this.http.put<any>(`${environment.url_api}/admins-edit/`, data, {headers:headers});
+  }
+
 }
