@@ -19,7 +19,7 @@
             <li class="nav-item">
               <a class="nav-link">Lista de materias</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="rol=='administrador'">
               <a class="nav-link" id="graficas" (click)="clickNavLink('graficas')">Gráficas</a>
             </li>
             <li class="nav-item dropdown">

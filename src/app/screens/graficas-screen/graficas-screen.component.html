@@ -1,0 +1,81 @@
+<div class="wrapper">
+  <div class="section-home">
+    <div class="header-graficas">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="body-home">
+      <div class="row mt-5 mb-5">
+        <div class="col-12">
+          <span class="title-perfil">Análisis de datos del sistema</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-3 mb-5" style="text-align: center;">
+          <div class="col-12">
+            <div class="alert alert-primary" role="alert">
+              <span class="title-table">Análisis de materias</span>
+            </div>
+          </div>
+        </div>
+        <!-- Home para la sección de gráficas -->
+        <div class="row w-100" style="text-align: center;">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-6 graph">
+                <canvas
+                  baseChart
+                  width="600"
+                  height="400"
+                  type="line"
+                  [data]="lineChartData"
+                  [plugins]="lineChartPlugins"
+                  [options]="lineChartOption"></canvas>
+              </div>
+              <!-- Barras -->
+              <div class="col-6 graph">
+                <canvas
+                  baseChart
+                  width="600"
+                  height="400"
+                  type="bar"
+                  [data]="barChartData"
+                  [plugins]="barChartPlugins"
+                  [options]="barChartOption"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 mb-5" style="text-align: center;">
+          <div class="col-12">
+            <div class="alert alert-primary" role="alert">
+              <span class="title-table">Análisis de usuarios</span>
+            </div>
+          </div>
+        </div>
+        <!-- Gráfica circular y de dona-->
+        <div class="row w-100 mt-5 mb-5" style="text-align: center;">
+          <div class="col-6 graph">
+            <canvas
+              baseChart
+              width="600"
+              height="400"
+              type="pie"
+              [data]="pieChartData"
+              [plugins]="pieChartPlugins"
+              [options]="pieChartOption"></canvas>
+          </div>
+          <div class="col-6 graph">
+            <canvas
+              baseChart
+              width="600"
+              height="400"
+              type="doughnut"
+              [data]="doughnutChartData"
+              [plugins]="doughnutChartPlugins"
+              [options]="doughnutChartOption"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
